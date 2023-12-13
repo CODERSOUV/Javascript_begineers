@@ -28,12 +28,17 @@
 // nums=[1,2,3,4,5];
 // arr(nums);
 function add(){
-    console.log(arguments)
+    // console.log(arguments)
     const array=Array.from(arguments)
-    console.log(array)
+    console.log(array);
+    const sum=array.reduce(function(acc,curr){
+        return acc+curr;
+    },0);
+    return sum;
 }
+
 function h1(...numbers){
     console.log(numbers)
 }
-add(2,3,4,5);
+console.log(`Sum is ${add(2,3,4,5)}`);
 h1(2,3,4,5);
